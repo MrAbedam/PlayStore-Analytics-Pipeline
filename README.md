@@ -8,7 +8,7 @@ A distributed data pipeline system for crawling, analyzing, and visualizing Goog
 
 App Analyser is a comprehensive analytics platform that:
 - Crawls Google Play Store for app statistics hourly
-- Collects and processes user reviews (1000 latest per app)
+- Collects and processes user reviews (500 latest per app)
 - Stores historical data for trend analysis
 - Provides business intelligence dashboards via Metabase
 - Uses distributed message queues for scalable data processing
@@ -53,7 +53,7 @@ Extracts hourly metrics for each application:
 - Ad support status (`adSupported`)
 
 ### 3. Review Collection
-Gathers the latest 1000 reviews with:
+Gathers the latest 500 reviews with:
 - Review ID (`reviewId`)
 - Timestamp (`at`)
 - Username (`userName`)
@@ -138,7 +138,7 @@ API_WORKERS=4
 
 # Crawler
 CRAWL_INTERVAL_HOURS=1
-MAX_REVIEWS_PER_APP=1000
+MAX_REVIEWS_PER_APP=500
 ```
 
 ## 📊 Monitored Applications
